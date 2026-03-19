@@ -11,7 +11,7 @@ test.describe("UI Components", () => {
         await page.getByText("Forms").click();
         await page.getByText("Form Layouts").click();
     })
-    test.only("Visual Comparision", async ({ page }) => {
+    test("Visual Comparision", async ({ page }) => {
         const usingtheGridForm = page.locator("nb-card", { hasText: "Using the Grid" });
         await usingtheGridForm.getByRole('radio', {name: "Option 1"}).check({force: true})
         const option1 = usingtheGridForm.getByRole('radio', {name: "Option 1"}).isChecked()
